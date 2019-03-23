@@ -1,7 +1,7 @@
-const css = require( './css/style.css' );
+// const css = require( './css/style.css' );
 
 const displayName = () => {
-	console.log( 'Index' );
+	console.log( 'Bindex' );
 };
 
 displayName();
