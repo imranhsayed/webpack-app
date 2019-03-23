@@ -28,12 +28,19 @@
 // 	},
 // };
 
-module.exports = (env) => {
+const webpack = require( 'webpack' );
+const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
+
+module.exports = ({ mode }) => {
 
 	return {
-		mode: env.mode,
+		mode,
 		output: {
 			filename: "bundle.js"
-		}
+		},
+
+		plugins: [
+			new HtmlWebPackPlugin(), new webpack.ProgressPlugin()
+		]
 	}
 };
