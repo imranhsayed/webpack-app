@@ -6,7 +6,7 @@ const button = makeButton( 'Click me' );
 document.body.appendChild( button );
 
 const displayName = () => {
-	console.log( 'Bindex' );
+	console.log( 'Bindesxsss' );
 };
 
 displayName();

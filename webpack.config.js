@@ -29,6 +29,7 @@
 // };
 
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
+const webpack = require( 'webpack' );
 
 module.exports = ({ mode }) => {
 
@@ -39,7 +40,7 @@ module.exports = ({ mode }) => {
 		},
 
 		plugins: [
-			new HtmlWebPackPlugin()
+			new HtmlWebPackPlugin(), new webpack.ProgressPlugin()
 		]
 	}
 };
