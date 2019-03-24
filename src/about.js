@@ -1,5 +1,3 @@
-const displayName = () => {
+export const displayName = () => {
 	console.log( 'About' );
-}
-
-displayName();
+};
