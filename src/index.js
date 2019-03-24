@@ -1,7 +1,5 @@
-// const css = require( './css/style.css' );
-
-const displayName = () => {
-	console.log( 'Test' );
+// src/index.js
+const test = () => {
+	console.log( 'test something change' );
 };
-
-displayName();
+test();
