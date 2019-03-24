@@ -1,5 +1,10 @@
 // src/index.js
-const test = () => {
-	console.log( 'test something change' );
+import styles from './style.css';
+const addButton = () => {
+	const button = document.createElement( 'button' );
+	button.textContent = 'Click me';
+
+	document.body.appendChild( button );
 };
-test();
+
+addButton();
