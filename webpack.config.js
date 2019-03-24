@@ -13,8 +13,13 @@ module.exports = {
 
 		rules: [
 			{
-				test: /\.css/,
-				use: ["style-loader", "css-loader"]
+				test: /\.(png|jp?g|svg)$/,
+				use: [{
+					loader: "url-loader",
+					options: {
+						limit:5000
+					}
+				}]
 			}
 		]
 	},

@@ -1,9 +1,10 @@
-import css from './style.css';
+import imageBase64 from './Icon.jpg';
+
 const displayName = () => {
 	console.log( 'Test' );
-	const button = document.createElement( 'button' );
-	button.textContent = 'Click me';
-	document.body.appendChild( button )
+	const img = document.createElement( 'img' );
+	img.src = imageBase64;
+	document.body.appendChild( img )
 };
 
 displayName();
