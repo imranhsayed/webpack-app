@@ -1,6 +1,5 @@
-const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
-
 // webpack.config.js
+const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
 const path = require( 'path' );
 module.exports = {
 	context: __dirname,
@@ -9,11 +8,13 @@ module.exports = {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'main.js',
 	},
+
 	module: {
+
 		rules: [
 			{
-				test: /\.js$/,
-				use: 'babel-loader',
+				test: /\.css/,
+				use: ["style-loader", "css-loader"]
 			}
 		]
 	},
