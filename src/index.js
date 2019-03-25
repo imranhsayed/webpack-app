@@ -1,5 +1,6 @@
 // src/index.js
 import Icon from './icon.jpg';
+import style from './style.css';
 
 console.log( Icon );
 
