@@ -1,11 +1,4 @@
 // src/index.js
-import Icon from './icon.jpg';
-import style from './style.css';
-
-import { createImage } from "./CreateImage";
-
-const myImage = createImage( Icon );
-
 
 const loadFooter = () => import( './Footer.js' );
 
@@ -20,7 +13,6 @@ const addButton = () => {
 	} );
 
 	document.body.appendChild( button );
-	document.body.appendChild( myImage );
 };
 
 addButton();
