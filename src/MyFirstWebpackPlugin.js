@@ -1,4 +1,4 @@
-class BasicPlugin {
+class MyFirstWebpackPlugin {
 	constructor() {}
 
 	apply( compiler ) {
@@ -8,4 +8,4 @@ class BasicPlugin {
 	}
 }
 
-module.exports = BasicPlugin;
+module.exports = MyFirstWebpackPlugin;

@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require( 'path' );
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
+const MyFirstWebpackPlugin = require( './src/MyFirstWebpackPlugin' );
 
 module.exports = {
 	devtool: "source-maps",
@@ -31,5 +32,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [ new HtmlWebPackPlugin() ]
+	plugins: [ new HtmlWebPackPlugin(), new MyFirstWebpackPlugin() ]
 };
