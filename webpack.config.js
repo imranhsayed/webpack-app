@@ -11,11 +11,20 @@ module.exports = {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'main.js',
 	},
+	resolveLoader: {
+		alias: {
+			"my-loader": require.resolve( './build-utils/my-loader.js' )
+		}
+	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				use: 'babel-loader',
+			},
+			{
+				test: /\.js$/,
+				use: 'my-loader'
 			},
 			{
 				test: /\.css$/,
