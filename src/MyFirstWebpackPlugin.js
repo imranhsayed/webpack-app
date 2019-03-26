@@ -13,10 +13,16 @@ class MyFirstWebpackPlugin {
 
 		compiler.hooks.compilation.tap( 'MyFirstWebpackPlugin',( compilation, params ) => {
 			const thisCompilationIWantToInspect = compilation;
-			compilation.hooks.seal.tap( 'MyFirstWebpackPlugin', () => {
-				console.log( thisCompilationIWantToInspect );
-			} )
+			new MyFirstWebpackCompilationPlugin().apply( compilation );
 		} );
+	}
+}
+
+class MyFirstWebpackCompilationPlugin {
+	apply( compilation ) {
+		compilation.hooks.seal.tap( 'MyFirstWebpackPlugin', () => {
+
+		} )
 	}
 }
 
