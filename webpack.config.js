@@ -10,34 +10,16 @@ module.exports = {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'main.js',
 	},
-	resolveLoader: {
-		alias: {
-			"my-loader": require.resolve( './build-utils/my-loader.js' )
-		}
-	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
-				use: 'babel-loader',
+				exclude: /node_modules/,
+				loader: "babel-loader",
+				query: {
+					presets: ['env']
+				}
 			},
-			{
-				test: /\.js$/,
-				use: 'my-loader'
-			},
-			{
-				test: /\.css$/,
-				use: [ 'style-loader', 'css-loader' ],
-			},
-			{
-				test: /\.(png|jpe?g|svg)$/,
-				use: [{
-					loader: "url-loader",
-					options: {
-						limit: 50000000
-					}
-				}]
-			}
 		]
 	},
 	plugins: [ new HtmlWebPackPlugin() ]
