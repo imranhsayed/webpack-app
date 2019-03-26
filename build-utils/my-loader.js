@@ -1,4 +1,5 @@
 function myLoader( source ) {
+	console.log( 'src', source );
 	return source;
 }
 
