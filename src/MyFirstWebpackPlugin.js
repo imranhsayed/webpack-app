@@ -2,8 +2,20 @@ class MyFirstWebpackPlugin {
 	constructor() {}
 
 	apply( compiler ) {
-		compiler.plugin( 'make', ( compilation ) => {
-			console.log( ' I now have access to the compilation' );
+		compiler.hooks.done.tapAsync( 'MyFirstWebpackPlugin', ( stats, cb ) => {
+			const assetNames = [];
+			for( let assetName in stats.compilation.assets ) {
+				assetNames.push( assetName );
+			}
+			console.log( assetNames.join( '\n' ) );
+			cb();
+		});
+
+		compiler.hooks.compilation.tap( 'MyFirstWebpackPlugin',( compilation, params ) => {
+			const thisCompilationIWantToInspect = compilation;
+			compilation.hooks.seal.tap( 'MyFirstWebpackPlugin', () => {
+				console.log( thisCompilationIWantToInspect );
+			} )
 		} );
 	}
 }
