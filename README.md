@@ -3,7 +3,7 @@
 
 ### Branch Info
 
-1. [webpack-dev-server](https://github.com/imranhsayed/webpack-app/tree/webpack-dev-server) An example for webpack dev server
+1. :pager: [webpack-dev-server](https://github.com/imranhsayed/webpack-app/tree/webpack-dev-server) An example for webpack dev server
 
 ### Install Package
 `cd branch-name` 
