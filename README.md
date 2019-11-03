@@ -1,5 +1,5 @@
 ## Set Up Webpack
-:package: Examples for learning Webpack.
+:package: Examples for learning Webpack
 
 ### Branch Info
 
